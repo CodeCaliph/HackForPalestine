@@ -64,4 +64,4 @@ def index():
     return jsonify({"message": "The API is running."})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
