@@ -30,7 +30,7 @@ def fuzzy_search(name, choices, threshold=72):
 def search():
     data = request.get_json()
     input_name = data.get('name', '').strip().lower()
-
+    
     if not input_name:
         return jsonify({'error': 'No name provided, enter a name to search'}), 400
 
@@ -68,7 +68,7 @@ def search():
                 'data': result
             })
 
-    return jsonify({'error': 'Please provide a name to search.'}), 400
+    return jsonify({'result': 'Not in our list. There is high probability that the product is not in boycott list'}), 200
 
 @app.route('/')
 def index():
