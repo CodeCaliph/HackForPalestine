@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  
 import pandas as pd
 from rapidfuzz import process, fuzz
 import os
 
 app = Flask(__name__)
+CORS(app) 
 
 brands = pd.read_csv("data/brands.csv")
 companies = pd.read_csv("data/companies.csv")

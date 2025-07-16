@@ -1,3 +1,4 @@
 flask
 pandas
 rapidfuzz
+flask_cors
